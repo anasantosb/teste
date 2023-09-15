@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background-color: #14213d;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    transition: color 0.3s; /* Adicione esta transição para suavizar a mudança de cor */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+}
+
+nav li {
+    margin-left: 7px;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilo padrão do cabeçalho (light mode) */
+nav.light-mode {
+    background-color: #e5e5e5; /* Fundo branco */ 
+    color: #14213d; /* Texto preto */
+}
+
+/* Estilo padrão do cabeçalho (dark mode) */
+nav.dark-mode {
+    background-color: #14213d; /* Fundo preto */
+    color: #e5e5e5; /* Texto branco */
+}
+
+/* Estilo para o logo no modo claro */
+nav.light-mode .logo a {
+    color: #14213d; /* Texto preto */
+}
+
+/* Estilo para o logo no modo escuro */
+nav.dark-mode .logo a {
+    color: #e5e5e5; /* Texto branco */
+}
+
+/* Estilo para os links no modo claro */
+nav.light-mode ul li a {
+    color: #14213d; /* Texto preto */
+}
+
+/* Estilo para os links no modo escuro */
+nav.dark-mode ul li a {
+    color: #e5e5e5; /* Texto branco */
+}
+
+.banner {
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Restante do CSS permanece inalterado */
+
+
+.texto .titulo {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.texto .sub_titulo {
+    color: #fff;
+    font-size: 58px;
+    font-weight: 600;
+}
+
+.texto .sub_titulo1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.texto .frase {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.texto .botoes {
+    margin-top: 30px;
+}
+
+.texto .botoes a {
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    border: 0;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.texto .botoes a.n-overlay {
+    color: white;
+    background: none;
+    border: 2px solid white;
+}
+
+.texto .botoes a.n-overlay:hover {
+    color: black;
+    background-color: white;
+}
+
+.texto .botoes a.overlay {
+    color: white;
+    background: none;
+    border: 2px solid white;
+}
+
+.texto .botoes a.overlay:hover {
+    background: white;
+    color: black;
+}
+
+.footer {
+    background-color: #14213d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Restante do seu CSS... */
+
+/* Estilo para os links no modo escuro */
+nav.dark-mode ul li a {
+    color: #e5e5e5; /* Texto branco */
+}
+
+/* Estilo para o hover dos links no modo escuro */
+nav.dark-mode ul li a:hover {
+    background-color: #e5e5e5;
+    color: #14213d;
+}
+
+/* Restante do seu CSS... */
+
+
+/* Estilo para o light mode */
+.light-mode {
+    background-color: #e5e5e5;
+    color: #14213d;
+}
+
+/* Estilo para o dark mode */
+.dark-mode {
+    background-color: #14213d;
+    color: #e5e5e5;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-icon {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Estilo para o switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Ocultar o checkbox padrão */
+.switch input {
+    display: none;
+}
+
+/* Estilo para o slider do switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Estilo para o botão do switch (círculo) */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Estilo para o switch quando estiver marcado */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+/* Estilo para o botão do switch quando estiver marcado */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.container-slide{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    height: 60vh;
+    background-color: black;
+    margin: 5vh auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px black;
+    border: 5px solid black;
+}
+
+.container-items {
+    position: absolute;
+    display: flex;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item {
+    width: 50vw;
+    height: 50vh;
+    transition: all 1s;
+}
+.item:first-child{
+    margin-left: -100%;
+}
+
+.item img {
+    width: 50vw;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+.action-button{
+    font: bold 30px sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    color: #00000000;
+    user-select: none;
+    z-index: 1;
+}
+.action-button:hover{
+    color: white;
+    background-color: #00000055;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+/* style.css */
+.blur-background::before {
+    content: "";
+    background: url('background.jpg') center/cover no-repeat;
+    filter: blur(100px); /* Ajuste o valor conforme necessário */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
